@@ -1,0 +1,31 @@
+{
+  "name": "@repo/schemas",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shared TypeScript schemas for JDM Editor monorepo",
+  "private": true,
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^8.57.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.8.3"
+  },
+  "prettier": "@repo/prettier-config"
+}
